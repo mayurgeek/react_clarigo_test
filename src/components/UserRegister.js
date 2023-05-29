@@ -10,7 +10,7 @@ export function UserRegister () {
         event.preventDefault()
         console.log({name,password,parent_id})
         try{
-            let res = await axios.post("http://localhost:8000/user_resgister",{name,password,parent_id})
+            let res = await axios.post("https://node-mongo-project.onrender.com/user_resgister",{name,password,parent_id})
             console.log(res.data)
             if(res["data"]["status"]===true){
                 setName("");

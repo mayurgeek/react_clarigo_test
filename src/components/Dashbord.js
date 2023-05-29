@@ -5,7 +5,8 @@ export  function Dashboard () {
    let [getdata,setGetdata] = useState({name:"",refer_id:"",total_amount:""})
  function fetch_data(){
     let user_token = localStorage.getItem("token");
-let url = "http://localhost:8000/user_dashbord"
+    
+let url = "https://node-mongo-project.onrender.com/user_dashbord"
     axios.get(
         url,
         {headers: {

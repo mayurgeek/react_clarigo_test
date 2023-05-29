@@ -9,7 +9,7 @@ export function Login () {
         event.preventDefault()
         ({name,password})
         try{
-            let res = await axios.post("http://localhost:8000/user_login",{name,password,})
+            let res = await axios.post("https://node-mongo-project.onrender.com/user_login",{name,password,})
             console.log(res.data)
             if(res["data"]["status"]===true){
                 setName("");
