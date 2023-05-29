@@ -6,8 +6,8 @@ export function UserRegister () {
     const [password, setPassword] = useState("")
     const [parent_id, setParent_id] = useState("")
 
-   async function user_fun(event){
-        event.preventDefault()
+   async function user_fun(e){
+        e.preventDefault()
         console.log({name,password,parent_id})
         try{
             let res = await axios.post("https://node-mongo-project.onrender.com/user_resgister",{name,password,parent_id})

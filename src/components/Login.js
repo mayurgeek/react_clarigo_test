@@ -5,8 +5,8 @@ export function Login () {
     const [name, setName] = useState("")
     const [password, setPassword] = useState("")
 
-    async function user_login(event){
-        event.preventDefault()
+    async function user_login(e){
+        e.preventDefault()
         ({name,password})
         try{
             let res = await axios.post("https://node-mongo-project.onrender.com/user_login",{name,password,})
