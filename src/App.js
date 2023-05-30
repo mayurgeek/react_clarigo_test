@@ -12,10 +12,10 @@ export default function App() {
     <div className="container-fluid">
       <Routes>
         <Route>
-          <Route exact path="/" element={<Dashboard />} />
-          <Route exact path="/user_registeration" element={<UserRegister />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="dashboard" element={<Dashboard/>} />
+          <Route  path="/" element={<Dashboard />} />
+          <Route  path="user_registeration" element={<UserRegister />} />
+          <Route  path="login" element={<Login />} />
+          <Route  path="dashboard" element={<Dashboard/>} />
           <Route path="*" element={<h1>no page</h1>} />
         </Route>
       </Routes>

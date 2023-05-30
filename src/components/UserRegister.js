@@ -1,7 +1,9 @@
 import { useState,useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export function UserRegister () {
+    const navigate = useNavigate();
     const [name, setName] = useState("")
     const [password, setPassword] = useState("")
     const [parent_id, setParent_id] = useState("")
@@ -17,7 +19,8 @@ export function UserRegister () {
                 setPassword("");
                 setParent_id("")
                 localStorage.setItem('token',res["data"]["token"]);
-                alert(res["data"]["response"])        
+                alert(res["data"]["response"])  
+                navigate("/")      
             }else{
                 alert(res["data"]["response"])
             }
